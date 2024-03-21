@@ -1,7 +1,10 @@
-﻿namespace Ordersolution.Models
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+namespace Ordersolution.Models
 {
     public class Order
     {
+        [BindNever]
         public int? OrderNo { get; set; }
         public DateTime? OrderDate { get; set; }
         public double InvoicePrice { get; set; }

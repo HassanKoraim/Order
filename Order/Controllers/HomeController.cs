@@ -16,7 +16,12 @@ namespace Ordersolution.Controllers
             }
             else
             {
-                return Json(order);
+                // generate a random order number between 1 and 99999
+                Random random = new Random();
+                int randomOrderNumber = random.Next(1, 99999);
+                //return Json(order.OrderNo);
+                order.OrderNo = randomOrderNumber;
+                return Json(new { OrderNumber = order.OrderNo});
             }
         }
     }
