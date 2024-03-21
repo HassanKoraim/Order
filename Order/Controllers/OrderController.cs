@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Ordersolution.Models;
-namespace Ordersolution.Controllers
+using OrderSolution.Models;
+namespace OrderSolution.Controllers
 {
-    public class HomeController : Controller
+    public class OrderController : Controller
     {
+        [HttpPost]
         [Route("/order")]
         public IActionResult Index(Order order)
         {
