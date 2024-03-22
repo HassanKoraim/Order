@@ -7,6 +7,7 @@ namespace OrderSolution.Models
     {
         [BindNever]
         public int? OrderNo { get; set; }
+        [MinimumDateValidatorAttribute]
         public DateTime? OrderDate { get; set; }
         [InvoicePriceValidator]
         public double? InvoicePrice { get; set; }
